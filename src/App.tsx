@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
 import ProtectedRoute from "./utils/ProtectedRoute.jsx";
+import LandingPage from "./pages/LandingPage.tsx";
 import "./App.css";
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/signup" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<ProtectedRoute />} />
+          <Route path="/dashboard" element={<ProtectedRoute />} />
         </Routes>
       </BrowserRouter>
     </>

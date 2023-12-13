@@ -42,7 +42,7 @@ export default function Login() {
     console.log("hi");
     const responseData = await apiService.getUsers(token);
     console.log(responseData);
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (
